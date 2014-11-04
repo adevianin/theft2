@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="consts.js"></script>
+<script src="Entity.js"></script>
+<script src="FrapsManager.js"></script>
+<script src="imgLoader.js"></script>
+<script src="world.js"></script>
+<script src="Bot.js"></script>
+<script src="Player.js"></script>
+<script src="keyBoardControl.js"></script>
+<script src="levels.js"></script>
+<script src="menu.js"></script>
+<script>
+
+window.onload = function(){
+	imgLoader.allImgLoaded = function(){
+		startGame();//started when all images will be loaded
+	}
+	imgLoader.load();
+
+}
+
+function startGame(){
+	document.onkeydown = keyBoardControl.keyDown;
+	document.onkeyup = keyBoardControl.keyUp;		
+	
+	var context = document.getElementById("canv").getContext("2d");
+	keyBoardControl.addListener(menu);		
+	frapsManager.init(context, menu, consts.FPS, true);
+	frapsManager.start();
+}
+
+</script>
+</head>
+
+<body style="padding:0">
+
+<canvas style="" id="canv" width="460" height="400"></canvas>
+</body>
+
+
+</html>
