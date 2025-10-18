@@ -1,4 +1,4 @@
-This is my 2D game, developed entirely in vanilla JavaScript. It was written around 2010, a time when inheritance in JS was still implemented using prototypes, and tools like Webpack were not yet common.
+This is my 2D game, developed entirely in vanilla JavaScript. It was written around 2013, a time when inheritance in JS was still implemented using prototypes, and tools like Webpack were not yet common.
 
 A keyboard is required to play, as the game is controlled by key presses.
 
